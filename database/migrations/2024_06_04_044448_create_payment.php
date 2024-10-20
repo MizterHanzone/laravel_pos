@@ -18,10 +18,6 @@ return new class extends Migration
             $table->string("khqr")->nullable();
             $table->foreignId('user_id');
             $table->foreignId('order_id');
-
-            $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
-            $table->foreign('order_id')->references('order_id')->on('orders')->onDelete('cascade');
-
             $table->timestamps();
         });
     }

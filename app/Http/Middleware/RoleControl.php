@@ -22,10 +22,6 @@ class RoleControl
     
                 return redirect('/admin/cart');
             }
-        }else{
-            session(['message'=>'You are Unauthorized! Please login.', 'type'=>'warning']);
-    
-            return redirect('/admin/login');
         }
         return $next($request);
     }
